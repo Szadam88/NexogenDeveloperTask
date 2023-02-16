@@ -10,5 +10,11 @@
         public ILoggerInterface GetFileLogger() => new FileLogger();
 
         public ILoggerInterface GetStreamLogger() => new StreamLogger();
+
+        public IAsyncLoggerInterface GetAsyncConsoleLogger() => new LoggerWrapper<ConsoleLogger>(new ConsoleLogger());
+
+        public IAsyncLoggerInterface GetAsyncFileLogger() => new LoggerWrapper<FileLogger>(new FileLogger());
+
+        public IAsyncLoggerInterface GetAsyncStreamLogger() => new LoggerWrapper<StreamLogger>(new StreamLogger());
     }
 }
