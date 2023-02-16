@@ -1,6 +1,6 @@
 ﻿namespace LoggerLibrary.Enums
 {
-    public enum LogLevels
+    public enum LogLevelEnum
     {
         Debug,
         Info,
