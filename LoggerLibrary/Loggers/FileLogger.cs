@@ -1,6 +1,7 @@
 ﻿namespace LoggerLibrary.Loggers
 {
     using LoggerLibrary._Abstraction;
+    using LoggerLibrary._Abstraction.Models;
     using System.IO;
 
     internal sealed class FileLogger : LoggerBase

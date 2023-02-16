@@ -1,6 +1,7 @@
 ﻿namespace LoggerLibrary.Loggers
 {
     using LoggerLibrary._Abstraction;
+    using LoggerLibrary._Abstraction.Models;
     using LoggerLibrary.Enums;
 
     internal sealed class ConsoleLogger : LoggerBase

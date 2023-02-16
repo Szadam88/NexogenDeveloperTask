@@ -5,6 +5,7 @@
 namespace LoggerLibrary.Loggers
 {
     using LoggerLibrary._Abstraction;
+    using LoggerLibrary._Abstraction.Models;
     using System.Text;
 
     internal sealed class StreamLogger : LoggerBase

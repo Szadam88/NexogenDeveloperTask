@@ -1,5 +1,6 @@
 ﻿namespace LoggerLibrary._Abstraction
 {
+    using LoggerLibrary._Abstraction.Models;
     using LoggerLibrary.Enums;
 
     public interface ILoggerInterface

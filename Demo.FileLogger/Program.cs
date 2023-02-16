@@ -25,7 +25,7 @@ internal class Program
         Console.WriteLine("If genereate the files with random lenght of message the file size wont reach the 5000 byte");
         Random rnd = new Random();
 
-        for (int i = 0; i < 100000; i++)
+        for (int i = 0; i < 1000; i++)
         {
             logger.LogMessage(LogLevelEnum.Info, $"random length message: {string.Concat(Enumerable.Repeat("c", rnd.Next(100)))}");
         }

@@ -1,4 +1,4 @@
-﻿namespace LoggerLibrary._Abstraction
+﻿namespace LoggerLibrary._Abstraction.Models
 {
     using LoggerLibrary.Enums;
 

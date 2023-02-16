@@ -1,5 +1,4 @@
-﻿
-namespace LoggerLibrary.Loggers
+﻿namespace LoggerLibrary._Abstraction.Models
 {
     public sealed class StreamEventArgs : EventArgs
     {

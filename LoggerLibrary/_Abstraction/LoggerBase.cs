@@ -1,4 +1,5 @@
-﻿using LoggerLibrary.Enums;
+﻿using LoggerLibrary._Abstraction.Models;
+using LoggerLibrary.Enums;
 
 namespace LoggerLibrary._Abstraction
 {
