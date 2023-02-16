@@ -4,7 +4,8 @@ namespace LoggerLibrary._Abstraction
 {
     internal abstract class LoggerBase : ILoggerInterface
     {
-        private string logFormat = "#{LogTime} [#{LogLevel}] #{LogMessage}";
+        //0:LogTime 1:LogLevel 2:LogMessage
+        private string logFormat = "#{0} [#{1}] #{2}";
 
         public virtual string LogFormat
         {

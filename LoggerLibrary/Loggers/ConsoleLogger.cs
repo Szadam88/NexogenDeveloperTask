@@ -17,7 +17,7 @@
             {
                 throw new ArgumentException($"'{nameof(message.LogMessage)}' cannot be null or empty.", nameof(message.LogMessage));
             }
-            else if (message.LogMessage.Length >= MaxAllowedLength)
+            else if (message.LogMessage.Length > MaxAllowedLength)
             {
                 throw new ArgumentException($"Max allowed length for {nameof(message.LogMessage)} is {MaxAllowedLength} character", nameof(message.LogMessage));
             }
@@ -31,11 +31,9 @@
             => logLevel switch
             {
                 LogLevelEnum.Debug => ConsoleColor.Gray,
-                LogLevelEnum.Info => ConsoleColor.Gray,
-                LogLevelEnum.Error => ConsoleColor.Gray,
+                LogLevelEnum.Info => ConsoleColor.Green,
+                LogLevelEnum.Error => ConsoleColor.Red,
                 _ => throw new Exception("Invalid loglevel"),
             };
-
-
     }
 }
