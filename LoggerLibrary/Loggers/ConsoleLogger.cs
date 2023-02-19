@@ -22,6 +22,9 @@
             {
                 throw new ArgumentException($"Max allowed length for {nameof(message.LogMessage)} is {MaxAllowedLength} character", nameof(message.LogMessage));
             }
+
+            //without lock in async test cases the colour will randomly change beacuse console is a static object.
+            //that means sometimes 2+ task reach  the same foreground colour change point in a same time so the latest colour change will be the "strongest" which leads to the wrong colour being used for the the message
             lock (Console.Out)
             {
                 Console.ForegroundColor = GetForegroundColor(message.LogLevel);

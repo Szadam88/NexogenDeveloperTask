@@ -1,7 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
 
+//Yes i know, i break the architecture of my application and of course a few SOLID principle.
+//I know and i'm terribly sorry but i couldt figure out better way to make this class testable without implementing an event aggregator pattern that i tought would be a bit "out of scope" curretnly
+//so in summary please ignore the next line ;)
 [assembly: InternalsVisibleTo("Demo.StreamLogger")]
-
 namespace LoggerLibrary.Loggers
 {
     using LoggerLibrary._Abstraction;
