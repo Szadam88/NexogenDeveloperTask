@@ -38,5 +38,28 @@ internal class Program
         {
             Console.WriteLine($"The exception type{e.GetType()}, message:{e.Message}");
         }
+
+        Console.WriteLine("------------------Async----------------------");
+
+        Random rnd = new Random();
+        var asyncLogger = factory.GetAsyncConsoleLogger();
+        for (int i = 0; i < 100; i++)
+        {
+            switch (rnd.Next(1, 4))
+            {
+                case 1:
+                    asyncLogger.LogMessageAsync(new LogMessageModel(LogLevelEnum.Info, "Info demo message"));
+                    break;
+                case 2:
+                    asyncLogger.LogMessageAsync(new LogMessageModel(LogLevelEnum.Debug, "Debug demo message"));
+                    break;
+                case 3:
+                    asyncLogger.LogMessageAsync(new LogMessageModel(LogLevelEnum.Error, "Error demo message"));
+                    break;
+                default:
+                    break;
+            }
+        }
+        Console.ReadKey();
     }
 }

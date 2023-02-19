@@ -22,10 +22,12 @@
             {
                 throw new ArgumentException($"Max allowed length for {nameof(message.LogMessage)} is {MaxAllowedLength} character", nameof(message.LogMessage));
             }
-
-            Console.ForegroundColor = GetForegroundColor(message.LogLevel);
-            Console.WriteLine(string.Format(LogFormat, message.LogTime, message.LogLevel, message.LogMessage));
-            Console.ResetColor();
+            lock (Console.Out)
+            {
+                Console.ForegroundColor = GetForegroundColor(message.LogLevel);
+                Console.WriteLine(string.Format(LogFormat, message.LogTime, message.LogLevel, message.LogMessage));
+                Console.ResetColor();
+            }
         }
 
         private static ConsoleColor GetForegroundColor(LogLevelEnum logLevel)
